@@ -1,0 +1,51 @@
+<style type="text/css">
+button {
+	border: 0;
+	margin-right: 10px;
+	padding: 5px 10px;
+}
+.two-column .col-lg-3 {
+	max-width: 50%;
+	flex: 0 0 50%;
+}
+</style>
+
+<h2>E-commerce category</h2>
+
+<div class="container">
+
+<!-- 	<div class="dropdown">
+		<select>
+		<option>Select</option>
+		<option>Low to High</option>
+		<option>High to Low</option>
+		</select>
+	</div>
+	<br> -->
+
+	<div class="buttons">
+		<button id="listView" (click)="listView()">List View</button> 
+		<button id="gridView" (click)="gridView()">Grid View</button>
+	</div>
+	<br>
+
+    <div class="row">
+        <div class="col">
+            <div class="row" [class.two-column]="check">
+                <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of products" >
+                    <div class="card">
+                        <img class="card-img-top" src="{{item.imageUrl}}" alt="{{item.name}}">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="#" title="{{item.name}}">{{item.name}}</a></h4>
+                            <h2>{{item.price}}</h2>
+                            <p class="card-text">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </div>
+</div>
